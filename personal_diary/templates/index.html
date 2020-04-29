@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Personal Diary</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- first load django static tag. -->
+    {% load static %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="{% static 'js/turn.min.js' %}"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Personal Diary</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Account</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Logout</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+<br>
+
+<div class="container">
+  <h3>Welcome to Personal Diary Guest</h3>
+  <p>A sample application which  helps you re-imagine your good old diary days.</p>
+</div>
+<div class="container">
+    <div id="flipbook">
+      <div class="hard"> Personal Diary</div>
+      <div class="hard"></div>
+      <div> Page 1 </div>
+      <div> Page 2 </div>
+      <div> Page 3 </div>
+      <div> Page 4 </div>
+      <div class="hard"></div>
+      <div class="hard">The END</div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  $("#flipbook").turn({
+    width: 1000,
+    height: 500,
+    autoCenter: false
+});
+</script>>
+
+</body>
+</html>
+
+
