@@ -3,4 +3,5 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 
 def HomePageView(request):
-    return render(request, "index.html")
+    context = {"image_list" : ["images/1.png"]}
+    return render(request, "index.html", context)
